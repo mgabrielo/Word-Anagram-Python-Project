@@ -59,7 +59,10 @@ if __name__ == '__main__':
      # Check if the program is run with exactly one argument
     if len(sys.argv) == 2:       
         input_filename = sys.argv[1]
-        process_file_for_anagrams(input_filename)
+        try:
+            process_file_for_anagrams(input_filename)
+        except Exception as e:
+            print(e)
     else:
         # Display error in command line if error occurs when wrong argument is provided
         print("Error: Wrong Arguments or Format Provided\n"
