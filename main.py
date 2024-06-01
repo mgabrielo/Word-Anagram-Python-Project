@@ -33,7 +33,7 @@ def process_chunk(chunk, input_filename):
 
 def process_file_for_anagrams(input_filename):
     # Set the chunk size for processing the file in chunks
-    chunk_size=10000
+    chunk_size=1000
     # Check if file is txt file and if it exist
     if not input_filename.endswith('.txt') and not os.path.isfile(input_filename):
         raise ValueError("Error: File must exist and must be a text file with a .txt extension")  
